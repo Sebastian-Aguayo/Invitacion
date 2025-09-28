@@ -5,69 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio Cumpleaños</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <section class="inicio">
     <img src="hb.png" alt="Imagen de inicio">
   </section>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <div class="confeti-fondo">
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <span class="confeti"></span>
+    <!-- ...mas confeti... -->
+  </div>
+
+  <!-- BLOQUE: Calendario + Reproductor oculto + Pintura -->
+  <section class="calendario-bloque">
+    <div class="reproductor-marco">
+      <span class="titulo-reproductor">¡Toca aquí!</span>
+      <audio id="audio-especial" src="The Five Stairsteps - Come Back (Official Audio).mp3"></audio>
+      <button class="boton-musica" onclick="document.getElementById('audio-especial').play()">
+        Escuchar canción especial
+      </button>
+    </div>
+    <!-- Imagen del calendario -->
+    <img src="Calendario.png" alt="Calendario Evento" class="img-calendario" />
+    <!-- Imagen pintura inferior -->
+    <img src="Pintura.png" alt="Pintura decorativa" class="img-pintura">
+  </section>
+
+  <section class="bloque-collage">
+    <img src="Imagenbd.png" alt="Collage celebración Jose" class="img-collage-grande">
+  </section>
+
+  <section class="evento-ubicacion">
+    <div class="evento-titulo">Lugar del evento</div>
+    <div class="evento-fondoimg">
+      <img src="Lugarde-encuentro.jpg" alt="Lugar de encuentro" class="evento-img-principal">
+    </div>
+  </section>
+
+  <div class="evento-ubicacion-texto">
+    Neonyx ubicado en Av. Ricardo VICUÑA/ URENDA
+  </div>
+
+  <div class="bloque-film">
+    <img src="hb2.jpg" alt="Collage tipo film" class="img-film">
+  </div>
+
+  <div class="bloque-dedicatoria">
+    <div class="dedicatoria-texto">
+      Se acerca el cumpleaños de Josefa! nos alegraría mucho que pudieras pasarlo con ella, para compartir momentos especiales y lindos, tu presencia lo haría más especial ♡.
+    </div>
+    <img src="Pintura2.jpeg" alt="Dedicatoria artística" class="img-dedicatoria">
+  </div>
+
+  <div class="confirmacion-marco">
+    <div class="confirmacion-texto">
+      <span>Confirma tu asistencia a</span>
+    </div>
+    <a class="confirmacion-boton" href="https://instagram.com/meowmerii" target="_blank">@meowmerii</a>
+  </div>
+
+  <!-- Script para ocultar el reproductor visualmente si lo deseas -->
+  <script>
+    document.getElementById('audio-especial').style.display = 'none';
+  </script>
 </body>
 </html>
-
-<div class="confeti-fondo">
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  <span class="confeti"></span>
-  
-  <!-- Puedes duplicar o agregar más spans según quieras más confeti -->
-</div>
-
-
-
-<!-- BLOQUE: Calendario + Spotify + Pintura -->
-<section class="calendario-bloque">
-  <div class="espacio-spotify">
-    <p class="mensaje-spotify">Toca aquí!</p>
-    <!-- Aquí luego debes agregar el código/barra de Spotify -->
-    <!-- COMENTARIO: Código de Spotify va aquí -->
-    <div class="placeholder-spotify"></div>
-  </div>
-
-  <!-- Imagen del calendario -->
-  <!-- Reemplaza "calendario.jpg" por el nombre real de tu imagen -->
-  <img src="Calendario.png" alt="Calendario Evento" class="img-calendario" />
-
-  <!-- Imagen de la pintura inferior -->
-  <!-- Cambia "pintura.jpg" por tu imagen, si la quieres mostrar siempre -->
-   <img src="Pintura.png" alt="Pintura decorativa" class="img-pintura">
-  <!-- COMENTARIO: Imagen de la pintura/decoración inferior aquí -->
-</section>
-
-<section class="bloque-collage">
-  <img src="Imagenbd.png" alt="Collage celebración Jose" class="img-collage-grande">
-  <!-- COMENTARIO: Puedes cambiar el nombre si la imagen tiene otro nombre -->
-</section>
-
-<section class="evento-ubicacion">
-  <div class="evento-titulo">Lugar del evento</div>
-  <div class="evento-fondoimg">
-    <img src="Lugarde-encuentro.jpg" alt="Lugar de encuentro" class="evento-img-principal">
-  </div>
-</section>
-
-<div class="evento-ubicacion-texto">
-  Neonyx ubicado en Av. Ricardo VICUÑA/ URENDA    <!-- Puedes poner la dirección, referencia, o solo el texto "Ubi" -->
-</div>
-
-
-
