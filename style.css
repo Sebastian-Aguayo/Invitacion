@@ -51,13 +51,36 @@ body::after {
 
 .confeti-fondo {
   position: fixed;
-  left: 0; top: 0;
+  left: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
 }
+
+.confeti {
+  position: absolute;
+  top: -40px;
+  border-radius: 50%;
+  opacity: 0.82;
+  width: 16px;
+  height: 8px;
+  animation: confeti-caida 4.5s linear infinite;
+}
+
+.confeti:nth-child(1) { left: 12vw; background: #ca95ea; animation-delay: 0s; }
+.confeti:nth-child(2) { left: 24vw; background: #e7bcff; animation-delay: 1s; }
+.confeti:nth-child(3) { left: 38vw; background: #f6c6d7; animation-delay: 2.2s; }
+.confeti:nth-child(4) { left: 52vw; background: #b191cb; animation-delay: 3.1s; }
+.confeti:nth-child(5) { left: 64vw; background: #fad5e2; animation-delay: 1.7s; }
+.confeti:nth-child(6) { left: 76vw; background: #c4b2ec; animation-delay: 2.8s; }
+.confeti:nth-child(7) { left: 81vw; background: #efd3f8; animation-delay: 0.4s; }
+.confeti:nth-child(8) { left: 90vw; background: #d7a4f7; animation-delay: 3.6s; }
+.confeti:nth-child(9) { left: 55vw; background: #ea92bb; animation-delay: 2.1s; }
+.confeti:nth-child(10){ left: 33vw; background: #f6c6d7; animation-delay: 0.7s; }
+
 
 /* --- CENTRAR SIEMPRE TODO --- */
 .inicio,
@@ -225,4 +248,14 @@ body::after {
   font-family: 'Poppins', 'Arial', sans-serif;
   font-style: italic;
   letter-spacing: 1.1px;
+}
+
+
+@media (max-width: 600px) {
+  .img-calendario {
+    width: 80vw;
+    max-width: 240px;
+    margin-bottom: 12px;
+    border-radius: 22px;
+  }
 }
