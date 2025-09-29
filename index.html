@@ -32,10 +32,8 @@
   <section class="calendario-bloque">
     <div class="reproductor-marco">
       <span class="titulo-reproductor">¡Toca aquí!</span>
-      <audio id="audio-especial" src="The Five Stairsteps - Come Back (Official Audio).mp3"></audio>
-      <button class="boton-musica" onclick="document.getElementById('audio-especial').play()">
-        Escuchar canción especial
-      </button>
+      <audio id="audio-especial" src="Icona Pop - I Love It (feat. Charli XCX) [OFFICIAL VIDEO].mp3"></audio>
+      <button class="boton-musica" id="playPauseBtn">Escuchar canción especial</button>
     </div>
     <!-- Imagen del calendario -->
     <img src="Calendario.png" alt="Calendario Evento" class="img-calendario" />
@@ -48,15 +46,22 @@
   </section>
 
   <section class="evento-ubicacion">
-    <div class="evento-titulo">Lugar del evento</div>
-    <div class="evento-fondoimg">
-      <img src="Lugarde-encuentro.jpg" alt="Lugar de encuentro" class="evento-img-principal">
-    </div>
-  </section>
-
+  <div class="evento-titulo">Lugar del evento</div>
+  <div class="evento-fondoimg">
+    <img src="Lugarde-encuentro.jpg" alt="Lugar de encuentro" class="evento-img-principal">
+  </div>
+  <!-- Primera ubicación -->
   <div class="evento-ubicacion-texto">
     Neonyx ubicado en Av. Ricardo VICUÑA/ URENDA
   </div>
+  <!-- Segunda ubicación resaltada -->
+  <div class="evento-ubicacion-texto especial">
+    Para luego finalmente terminar de celebrarlo en:<br>
+    <b>Pasaje Renoir 117</b> por parque Sor Vicenta,<br>
+    por calle Leonardo da Vinci
+  </div>
+</section>
+
 
   <div class="bloque-film">
     <img src="hb2.jpg" alt="Collage tipo film" class="img-film">
@@ -76,9 +81,47 @@
     <a class="confirmacion-boton" href="https://instagram.com/meowmerii" target="_blank">@meowmerii</a>
   </div>
 
-  <!-- Script para ocultar el reproductor visualmente si lo deseas -->
+  <!-- Script para ocultar el reproductor y cambiar el botón -->
   <script>
     document.getElementById('audio-especial').style.display = 'none';
+    const audio = document.getElementById('audio-especial');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    playPauseBtn.onclick = function() {
+      if (audio.paused || audio.ended) {
+        audio.play();
+        this.textContent = 'Detener música';
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        this.textContent = 'Escuchar canción especial';
+      }
+    };
+    audio.onended = function() {
+      playPauseBtn.textContent = 'Escuchar canción especial';
+    };
   </script>
+
+  <script>
+  document.getElementById('audio-especial').style.display = 'none';
+  const audio = document.getElementById('audio-especial');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  playPauseBtn.onclick = function() {
+    if (audio.paused || audio.ended) {
+      audio.play();
+      this.textContent = 'Detener música';
+      this.classList.add('reproduciendo');
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      this.textContent = 'Escuchar canción especial';
+      this.classList.remove('reproduciendo');
+    }
+  };
+  audio.onended = function() {
+    playPauseBtn.textContent = 'Escuchar canción especial';
+    playPauseBtn.classList.remove('reproduciendo');
+  };
+</script>
+
 </body>
 </html>
