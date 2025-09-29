@@ -231,7 +231,7 @@ body::after {
 .evento-img-principal {
   width: 92vw;
   max-width: 420px;
-  height: 200px;           /* Ajusta el alto, puede ser 120px, 160px, 200px, etc. */
+  height: 180px;  /* Anteriormente 200px, ahora mucho más bajita */
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
@@ -240,6 +240,7 @@ body::after {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 
 
@@ -462,4 +463,21 @@ body::after {
   margin-top: 14px;
   margin-bottom: 0px;
   letter-spacing: 0.06em;
+}
+
+.bloque-ubicacion-final {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 590px) {
+  .dedicatoria-texto {
+    font-size: 1.0em;
+    max-width: 90vw;
+    line-height: 1.28em;
+  }
 }
