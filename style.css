@@ -121,21 +121,28 @@ body::after {
 
 @media (max-width: 600px) {
   .img-calendario {
-    width: 110vw;
-    max-width: 110vw;
-    height: 48vw; /* puedes aumentar a 60vw o el valor preferido */
-    object-fit: contain;
-    background: #fff; /* puedes poner fondo si la imagen no cubre todo */
+    width: 98vw;
+    max-width: 100vw;
+    height: auto !important;      /* <-- asegura que NO usa height fijo */
+    object-fit: contain !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     outline: none !important;
-    margin-bottom: 12px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    background: none !important;
   }
 }
+img.img-calendario {
+  height: auto !important;
+  object-fit: contain !important;
+  max-width: 100vw !important;
+  width: 98vw !important;
+}
+
 
 
 
