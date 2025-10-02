@@ -112,10 +112,22 @@ body::after {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
 }
+
+@media (max-width: 600px) {
+  .img-calendario {
+    width: 80vw;
+    max-width: 240px;
+    margin-bottom: 12px;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
 
 
 .espacio-spotify {
