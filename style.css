@@ -112,9 +112,11 @@ body::after {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  border: none !important;
+  outline: none !important;
+  background: none !important;
 }
 
 @media (max-width: 600px) {
@@ -122,11 +124,14 @@ body::after {
     width: 80vw;
     max-width: 240px;
     margin-bottom: 12px;
+    border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-    border: none !important;
+    outline: none !important;
+    background: none !important;
   }
 }
+
 
 
 
